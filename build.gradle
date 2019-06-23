@@ -24,7 +24,7 @@ kotlin {
   linuxX64 {
     binaries {
       executable {
-        entryPoint 'org.duangsuse.securedesktop.linux' }
+        entryPoint 'org.duangsuse.securedesktop.linux.main' }
     }
   }
 }
