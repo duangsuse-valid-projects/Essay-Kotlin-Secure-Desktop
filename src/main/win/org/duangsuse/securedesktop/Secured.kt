@@ -8,7 +8,7 @@ typealias DesktopH = UInt
 typealias ThrId = UInt
 
 /**
- * Helper for entering protected mode Mixin (Anti-Keylogger)
+ * Helper for entering protected mode "fake Mixin" (Anti-Keylogger)
  */
 abstract class Secured {
     private var savedDesktop: DesktopH = 0
