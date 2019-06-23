@@ -5,9 +5,10 @@ import kotlin.native.concurrent.*
 class App: Secured() {
     fun start() {
         enterProtection()
-        newworker().executeSafely(identity(null)) {
+        newworker().executeSafely(identity(null)) { ignored ->
             protectNewThread()
             MessageBoxA(null, "Hello from protected thread", (MB_OK or MB_ICONINFORMATION))
+            return@executeSafely Unit
         }.consume {
             leaveProtection()
             close()
